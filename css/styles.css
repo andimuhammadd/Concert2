@@ -2,91 +2,47 @@ body {
     color: #ffffff;
     
 }
-
-.bg-image-full {
-    background-image: url('../assets/images/band.jpg');
+/* concert section */
+.concert-div {
+    background-image: url('../assets/images/crowded.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    position: relative;
+    border-top-left-radius: 45px; border-top-right-radius: 45px;
+    height: 180px;
+    padding: 20px;
+}
+
+.bi-heart-fill {
+    font-size: 2rem;
+    color: gray;
+    transition: color 0.3s ease;
+}
+
+.bi-heart-fill:hover {
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.promotion {
+    /* box-shadow:
+        8px 8px 12px rgba(0, 0, 0, 0.01), 
+        -8px 8px 12px rgba(0, 0, 0, 0.01),
+        -8px -8px 12px rgba(0, 0, 0, 0.01); */
+    padding: 20px;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
 }
 
-.header-content {
-    z-index: 1;
-}
+/* end of concert section */
 
-.header-content h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.header-content p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff5733;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #c70039;
-}
-
-.card-body {
-    padding: 2rem;
-}
-
-.card-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.card-text {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    padding: 0.2rem 0;
-}
-
+/* time countdown */
 .stylish-text {
     font-family: 'Roboto', sans-serif;
     font-size: 3rem;
-    background: -webkit-linear-gradient(45deg, #ff6ec4, #7873f5);
+    font-weight: bold;
+    background: #3399FF;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .time-unit {
@@ -97,83 +53,88 @@ ul li {
 .time-unit h1, h4 {
     margin-right: 0.5rem;
 }
+/* end of time countdown */
 
-.section-container {
-    position: relative;
-}
-
-.title-row {
-    position: relative;
-}
-
-.title-row::before {
-    content: '';
-    position: absolute;
-    top: -20px; /* Adjust this value based on your design */
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(45deg, #ff6ec4, #7873f5);
-}
-
-.section-title {
-    margin-top: 20px; /* Adjust margin to avoid overlap with the line */
-}
-
-.section-title2 {
-    margin-top: 10px; /* Adjust margin if needed */
-}
-
-.schedule-item {
-    display: flex;
+/* icon date */
+.rounded-list {
     align-items: center;
-    margin-bottom: 20px;
-}
-
-.schedule-day {
-    background-color: #ececec;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-}
-
-.schedule-details .card {
-    border: none;
-}
-
-.schedule-details .list-group-item {
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-}
-
-.schedule-details .list-group-item i {
-    margin-right: 10px;
-    color: #7873f5;
-}
-
-.fs-3 {
-    font-size: 1.25rem;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 24px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
     font-weight: bold;
 }
 
-.text {
-    margin-bottom: 5px;
+/* artist-section */
+.about-artist {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Optional: Adjust the border-radius */
+    overflow: hidden; /* Optional: Ensure the shadow follows the border-radius */
+    background: white; /* Optional: Ensure the background is white for better shadow visibility */
 }
 
-.col h1 {
-    margin-top: 20px;
+.artist-details {
+    
+    padding: 20px; /* Optional: Add padding for better spacing */
 }
 
-.col p {
-    margin-top: 10px;
+.artist-background-image {
+    background-image: url('../assets/images/band.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
 }
 
 .img-thumbnail {
+    max-width: 100%; /* Ensure the image doesn't overflow */
+}
+/* end of artist-section */
+
+
+/* News */
+.img-wrapper {
     max-width: 100%;
-    height: auto;
+    height: 65vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
+.img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media screen and (min-widht:576px) {
+    .carousel-inner {
+        display: flex;
+    }
+
+    .carouserl-item {
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100%/3);
+    }
+
+    .img-wrapper {
+        max-width: 100%;
+        height: 24vw;
+    }
+}
+
+.carousel-inner {
+    padding: 1rem;
+}
+
+.card {
+    margin:0 .5rem;
+}
+/* end of News */
+
+/* ticket card */
 .btn-buy {
     display: inline-block;
     padding: 10px 20px;
@@ -201,6 +162,24 @@ ul li {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
+/* ticket card */
+
+/* news */
+.news-card {
+    position: relative;
+    background-image: url('../assets/images/crowded.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.news-card .card-body {
+    height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* news */
 
 .footer {
     background-color: #1f1f1f;
